@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+    <title>Weather App</title>
+</head>
+
+<body>
+    <main>
+        <button class="settings"></button>
+        <section class="main-content">
+            <div class="data-section">
+                <h2 class="the-absolute-state">Heavy Rain</h2>
+                <h1 class="temperature">23°</h1>
+                <h2 class="location">Aurora, US</h2>
+                <h3 class="date">Thu, jan 27 2020</h3>
+                <p class="time">12:26:45</p>
+            </div>
+            <div class="search-section">
+                <div class="instructions-section">
+                    <span class="alert-span"></span>
+                    <ul class="instructions">
+                        <li>
+                            <p>? == optional</p>
+                        </li>
+                        <li>
+                            <p>[latitude],[longitude]; ex : 35,139</p>
+                        </li>
+                        <li>
+                            <p>[city],[state code]?,[country code]?; ex : Aurora,Ill,US</p>
+                        </li>
+                        <li>
+                            <p>[ZIP],[country code]?; ex : 60505,US</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search-bar">
+                    <input type="search"><button class="search-button"></button>
+                </div>
+            </div>
+            <p class="search-error">
+                City not found, please try again.
+            </p>
+        </section>
+        <section class="hourly-section">
+            <ul>
+                <li>
+                    <p>12:00</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p>23°</p>
+                </li>
+                <li>
+                    <p>12:00</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p>23°</p>
+                </li>
+                <li>
+                    <p>12:00</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p>23°</p>
+                </li>
+                <li>
+                    <p>12:00</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p>23°</p>
+                </li>
+                <li>
+                    <p>12:00</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p>23°</p>
+                </li>
+                <li>
+                    <p>12:00</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p>23°</p>
+                </li>
+                <li>
+                    <p>12:00</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p>23°</p>
+                </li>
+                <li>
+                    <p>12:00</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p>23°</p>
+                </li>
+                <li>
+                    <p>12:00</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p>23°</p>
+                </li>
+                <li>
+                    <p>12:00</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p>23°</p>
+                </li>
+                <li>
+                    <p>12:00</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p>23°</p>
+                </li>
+                <li>
+                    <p>12:00</p>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p>23°</p>
+                </li>
+            </ul>
+        </section>
+        <section class="daily-section">
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th></th>
+                    <th><p>min temp</p></th>
+                    <th><p>max temp</p></th>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="day">Saturday</p>
+                    </td>
+                    <td><img src="http://openweathermap.org/img/wn/10d@2x.png" alt=""></td>
+                    <td>
+                        <p class="min-temp">12°</p>
+                    </td>
+                    <td>
+                        <p class="max-temp">23°</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="day">Sunday</p>
+                    </td>
+                    <td><img src="http://openweathermap.org/img/wn/10d@2x.png" alt=""></td>
+                    <td>
+                        <p class="min-temp">12°</p>
+                    </td>
+                    <td>
+                        <p class="max-temp">23°</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="day">Monday</p>
+                    </td>
+                    <td><img src="http://openweathermap.org/img/wn/10d@2x.png" alt=""></td>
+                    <td>
+                        <p class="min-temp">12°</p>
+                    </td>
+                    <td>
+                        <p class="max-temp">23°</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="day">Tuesday</p>
+                    </td>
+                    <td><img src="http://openweathermap.org/img/wn/10d@2x.png" alt=""></td>
+                    <td>
+                        <p class="min-temp">12°</p>
+                    </td>
+                    <td>
+                        <p class="max-temp">23°</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="day">Wednesday</p>
+                    </td>
+                    <td><img src="http://openweathermap.org/img/wn/10d@2x.png" alt=""></td>
+                    <td>
+                        <p class="min-temp">12°</p>
+                    </td>
+                    <td>
+                        <p class="max-temp">23°</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="day">Thursday</p>
+                    </td>
+                    <td><img src="http://openweathermap.org/img/wn/10d@2x.png" alt=""></td>
+                    <td>
+                        <p class="min-temp">12°</p>
+                    </td>
+                    <td>
+                        <p class="max-temp">23°</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="day">Friday</p>
+                    </td>
+                    <td><img src="http://openweathermap.org/img/wn/10d@2x.png" alt=""></td>
+                    <td>
+                        <p class="min-temp">12°</p>
+                    </td>
+                    <td>
+                        <p class="max-temp">23°</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <script>
+
+        // const form = document.querySelector("form");
+        // form.addEventListener("submit", async event => {
+        //     event.preventDefault();
+
+        //     let url, data, coords, coordsURL;
+
+        //     // coordsURL = "http://api.openweathermap.org/geo/1.0/direct?q=aurora,us&limit=1&appid=e3b892de614d5d5524562f921655485e";
+        //     // coords = await fetch(coordsURL, { method: "GET" });
+        //     // coords = await coords.json();
+        //     // console.log(coords);
+        //     url = "https://api.openweathermap.org/data/2.5/onecall?lat=42&lon=-88&exclude=minutely,alerts&units=metric&appid=e3b892de614d5d5524562f921655485e";
+        //     data = await fetch(url, { method : "GET" });
+        //     data = await data.json();
+        //     console.log(data);
+
+        //     let days = [];
+        //     for (let day of data.daily) {
+        //         days.push(new Date(1e3 * day.dt));
+        //     }
+        //     console.log(days);
+        //     //return `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude=minutely,alerts&units=${units}&appid=20f7632ffc2c022654e4093c6947b4f4`;
+        // })
+    </script>
+</body>
+
+</html>

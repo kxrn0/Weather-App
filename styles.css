@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    /* background-image: url("./images/pix.jpg"); */
+    background: rgb(255, 233, 233);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main .settings {
+    background-color: transparent;
+    background-image: url("./images/cog-outline.svg");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    transition: transform .33s;
+}
+
+main .settings:hover {
+    transform: rotate(90deg);
+}
+
+main ul {
+    list-style: none;
+}
+
+.main-content {
+    background: rgba(31, 2, 31, 0.5);   
+    color: rgb(235, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.main-content .data-section {
+    text-align: center;
+}
+
+.main-content .data-section h1 {
+    font-size: 5rem;
+}
+
+.main-content .data-section h2 {
+    font-size: 2rem;
+}
+
+.main-content .search-section {
+    display: flex;
+    align-items: center;
+}
+
+.main-content .search-section .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.main-content .search-section input[type="search"] {
+    background: rgb(242, 242, 249);
+    height: 30px;
+    font-size: 1rem;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.main-content .search-section .search-button {
+    background-color: transparent;
+    background-image: url("./images/magnify.svg");
+    background-size: cover;
+    filter: invert(100%);
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    transition: background-color .33s;
+}
+
+.main-content .search-section .search-button:hover {
+    background-color: rgb(247, 237, 237, .25);
+}
+
+.main-content .search-section .search-button:active {
+    transform: scale(.975);
+}
+
+.main-content .search-section .alert-span {
+    background-color: rgb(226, 236, 236, .5);
+    background-image: url("./images/exclamation.svg");
+    background-size: cover;
+    color: red;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: background-color .33s;
+}
+
+.main-content .search-section .alert-span:hover {
+    background-color: azure;
+}
+
+.main-content .search-section .alert-span:hover ~ .instructions {
+    display: block;
+}
+
+.main-content .search-section .instructions {
+    background: rgb(18, 125, 146);
+    font-size: .85rem;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    left: -30px;
+    display: none;
+}
+
+.main-content .search-error {
+    background: rgb(255, 90, 90);
+    
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.hourly-section {
+    background: rgb(123, 218, 230);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 500px;
+    overflow-x: scroll;
+}
+
+.hourly-section::-webkit-scrollbar {
+    height: 5px;
+}
+
+.hourly-section::-webkit-scrollbar-track {
+    background: rgb(235, 230, 230);
+    border-radius: 10px;
+}
+
+.hourly-section::-webkit-scrollbar-thumb {
+    background: rgb(181, 163, 163);
+    border-radius: 10px;
+}
+
+.hourly-section ul {
+    display: flex;
+    text-align: center;
+}
+/* 
+.daily-section * {
+    border: 2px solid red;
+} */
+
+.daily-section {
+    background: rgb(179, 179, 245);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.daily-section table th {
+    background: rgb(116, 202, 255);
+    width: 4rem;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 480px) {  
+    .hourly-section {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        padding: 50px 20px;
+    }
+
+    main .settings {
+        top: 10px;
+        right: 10px;
+    }
+}
