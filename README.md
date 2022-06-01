@@ -1,3 +1,3 @@
 # Simple Weather App
 
-[LINK](https://google.com/weather)
+[LINK](https://kxrn0.github.io/Weather-App/)
