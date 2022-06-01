@@ -1,0 +1,51 @@
+.check-container {
+  --width: 60px;
+  --height: 28px;
+  --span-radius: 24px;
+  --padding: calc(0.5 * (var(--height) - var(--span-radius)));
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 16px;
+  width: var(--width);
+  height: var(--height);
+}
+
+.check-container * {
+  transition: all 0.33s;
+}
+
+.check-container input[type="checkbox"] {
+  background: rgb(85, 131, 174);
+  border-radius: var(--height);
+  appearance: none;
+  width: 100%;
+  height: 100%;
+}
+
+.check-container span {
+  background: rgb(253, 252, 209);
+  background-image: url("./images/temperature-celsius.svg");
+  background-size: cover;
+  position: absolute;
+  width: var(--span-radius);
+  height: var(--span-radius);
+  top: var(--padding);
+  left: var(--padding);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.check-container input[type="checkbox"]:checked+span {
+  transform: translateX(calc(var(--width) - 2 * var(--padding) - var(--span-radius)));
+  background-image: url("./images/temperature-fahrenheit.svg");
+  background-size: cover;
+}
+
+@media screen and (max-width: 480px) {  
+  .check-container {
+    --width: 40px;
+    --height: 20px;
+    --span-radius: 16px;
+  }
+}

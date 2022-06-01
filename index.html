@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="toggle.css">
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
     <title>Weather App</title>
@@ -12,7 +13,9 @@
 
 <body>
     <main>
-        <button class="settings"></button>
+        <div class="check-container units-toggle">
+            <input type="checkbox" id="toggle-switch" /><span></span>
+        </div>
         <section class="main-content">
             <div class="data-section">
                 <h2 class="the-absolute-state">Heavy Rain</h2>
@@ -32,10 +35,10 @@
                             <p>[latitude],[longitude]; ex : 35,139</p>
                         </li>
                         <li>
-                            <p>[city],[state code]?,[country code]?; ex : Aurora,Ill,US</p>
+                            <p>[city],[state code]?,[country code]?; ex : New York,ny,US</p>
                         </li>
                         <li>
-                            <p>[ZIP],[country code]?; ex : 60505,US</p>
+                            <p>[ZIP],[country code]?; ex : 73301,US</p>
                         </li>
                     </ul>
                 </div>
@@ -116,8 +119,12 @@
                 <tr>
                     <th>Day</th>
                     <th></th>
-                    <th><p>min temp</p></th>
-                    <th><p>max temp</p></th>
+                    <th>
+                        <p>min temp</p>
+                    </th>
+                    <th>
+                        <p>max temp</p>
+                    </th>
                 </tr>
                 <tr>
                     <td>
@@ -206,31 +213,6 @@
             </table>
         </section>
     </main>
-    <script>
-
-        // const form = document.querySelector("form");
-        // form.addEventListener("submit", async event => {
-        //     event.preventDefault();
-
-        //     let url, data, coords, coordsURL;
-
-        //     // coordsURL = "http://api.openweathermap.org/geo/1.0/direct?q=aurora,us&limit=1&appid=e3b892de614d5d5524562f921655485e";
-        //     // coords = await fetch(coordsURL, { method: "GET" });
-        //     // coords = await coords.json();
-        //     // console.log(coords);
-        //     url = "https://api.openweathermap.org/data/2.5/onecall?lat=42&lon=-88&exclude=minutely,alerts&units=metric&appid=e3b892de614d5d5524562f921655485e";
-        //     data = await fetch(url, { method : "GET" });
-        //     data = await data.json();
-        //     console.log(data);
-
-        //     let days = [];
-        //     for (let day of data.daily) {
-        //         days.push(new Date(1e3 * day.dt));
-        //     }
-        //     console.log(days);
-        //     //return `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude=minutely,alerts&units=${units}&appid=20f7632ffc2c022654e4093c6947b4f4`;
-        // })
-    </script>
 </body>
 
 </html>
