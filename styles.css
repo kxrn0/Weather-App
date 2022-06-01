@@ -40,6 +40,10 @@ main ul {
     font-size: 2rem;
 }
 
+.main-content .data-section .the-absolute-state {
+    text-transform: capitalize;
+}
+
 .main-content .search-section {
     display: flex;
     align-items: center;
@@ -131,6 +135,11 @@ main ul {
     overflow-x: scroll;
 }
 
+.hourly-section img {
+    width: 100px;
+    height: 100px;
+}
+
 .hourly-section::-webkit-scrollbar {
     height: 5px;
 }
@@ -155,6 +164,15 @@ main ul {
     border-radius: 10px;
     padding: 10px;
     text-align: center;
+}
+
+.daily-section img {
+    width: 100px;
+    height: 100px;
+}
+
+.daily-section table {
+    width: 500px;
 }
 
 .daily-section table th {
@@ -183,5 +201,9 @@ main ul {
 
     .main-content .search-section .search-button:active {
         background-color: rgb(247, 237, 237, .25);
-    }    
+    }   
+    
+    .daily-section table {
+        width: fit-content;
+    }
 }
