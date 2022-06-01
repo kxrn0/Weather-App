@@ -46,17 +46,17 @@ async function get_weather_data(value) {
             value = clean_input(value);
             latLong = value.split(',');
             coordinates = `${latLong[0]},${latLong[1]}`;
-            geoloc = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${latLong[0]}&lon=${latLong[1]}&limit=1&appid=e3b892de614d5d5524562f921655485e`, { method: "GET" });
+            geoloc = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${latLong[0]}&lon=${latLong[1]}&limit=1&appid=e3b892de614d5d5524562f921655485e`, { method: "GET" });
             geoloc = await geoloc.json();
             location = `${geoloc[0].name}, ${geoloc[0].country}`;
         }
         else if (cityStateReg.test(value)) {
             value = clean_input(value);
-            latLong = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=1&appid=e3b892de614d5d5524562f921655485e`, { method: "GET" });
+            latLong = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=1&appid=e3b892de614d5d5524562f921655485e`, { method: "GET" });
         }
         else if (zipReg.test(value)) {
             value = clean_input(value);
-            latLong = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${value}&appid=e3b892de614d5d5524562f921655485e`, { method: "GET" });
+            latLong = await fetch(`https://api.openweathermap.org/geo/1.0/zip?zip=${value}&appid=e3b892de614d5d5524562f921655485e`, { method: "GET" });
         }
         else {
             throw new Error("バカバカバカ！");
@@ -211,7 +211,7 @@ function populate_hourly_section(hourly) {
         hour = hourly[index + 1];
         today = new Date(hour.dt * 1e3);
         time.innerText = `${String(today.getHours()).padStart(2, '0')}:00`;
-        img.src = `http://openweathermap.org/img/wn/${hour.weather[0].icon}@2x.png`
+        img.src = `https://openweathermap.org/img/wn/${hour.weather[0].icon}@2x.png`
         temp.innerText = `${Math.round(hour.temp)}°`;
     });
 }
@@ -241,7 +241,7 @@ function populate_daily_section(daily) {
         dayItem = daily[index];
         thatDay = new Date(dayItem.dt * 1000);
         day.innerText = days[thatDay.getDay()];
-        img.src = `http://openweathermap.org/img/wn/${dayItem.weather[0].icon}@2x.png`;
+        img.src = `https://openweathermap.org/img/wn/${dayItem.weather[0].icon}@2x.png`;
         min.innerText = `${Math.round(dayItem.temp.min)}°`;
         max.innerText = `${Math.floor(dayItem.temp.max)}°`;
     });
