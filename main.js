@@ -22,6 +22,8 @@ searchButton.addEventListener("click", () => {
     let value;
 
     value = searchInput.value.trim();
+    if (!value)
+        return;
     clearTimeout(timeOurs);
     timeToWait = null;
     query_weather_data(value);
